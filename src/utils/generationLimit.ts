@@ -164,8 +164,13 @@ export async function checkGenerationLimitWithBackend(type: 'create' | 'random' 
   pending?: boolean;
 }> {
   try {
+    console.log('[checkGenerationLimitWithBackend] 开始请求:', type);
     const fingerprint = await getDeviceFingerprint();
+    console.log('[checkGenerationLimitWithBackend] 指纹:', fingerprint);
+    
     const response = await generationApi.checkLimit(type, fingerprint);
+    console.log('[checkGenerationLimitWithBackend] 响应成功:', response.data);
+    
     return {
       canGenerate: response.data.canGenerate,
       createRemaining: response.data.createRemaining,
@@ -174,8 +179,14 @@ export async function checkGenerationLimitWithBackend(type: 'create' | 'random' 
       isMember: response.data.isMember,
       pending: response.data.pending
     };
-  } catch (error) {
+  } catch (error: any) {
     console.error('后端验证失败，降级使用localStorage:', error);
+    console.error('错误详情:', {
+      message: error?.message,
+      code: error?.code,
+      status: error?.response?.status,
+      data: error?.response?.data
+    });
     // 降级策略：使用localStorage
     const userStr = localStorage.getItem('user');
     const user = userStr ? JSON.parse(userStr) : null;
