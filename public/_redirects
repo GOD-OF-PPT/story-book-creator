@@ -1,23 +1,25 @@
-# 静态资源文件 - 直接返回，不重定向
-*.css   /:splat   200
-*.js    /:splat   200
-*.png   /:splat   200
-*.jpg   /:splat   200
-*.jpeg  /:splat   200
-*.gif   /:splat   200
-*.svg   /:splat   200
-*.ico   /:splat   200
-*.woff  /:splat   200
-*.woff2 /:splat   200
-*.ttf   /:splat   200
-*.eot   /:splat   200
+# Cloudflare Pages _redirects 配置
+# 注意：规则按顺序匹配，更具体的规则要放在前面
 
-# assets目录下的所有文件
-/assets/*  /assets/:splat  200
-/story/assets/*  /story/assets/:splat  200
+# 静态资源文件 - 精确匹配，避免被SPA规则捕获
+/story/assets/*.css /story/assets/:splat.css 200
+/story/assets/*.js /story/assets/:splat.js 200
+/story/assets/*.png /story/assets/:splat.png 200
+/story/assets/*.jpg /story/assets/:splat.jpg 200
+/story/assets/*.jpeg /story/assets/:splat.jpeg 200
+/story/assets/*.gif /story/assets/:splat.gif 200
+/story/assets/*.svg /story/assets/:splat.svg 200
+/story/assets/*.ico /story/assets/:splat.ico 200
+/story/assets/*.woff /story/assets/:splat.woff 200
+/story/assets/*.woff2 /story/assets/:splat.woff2 200
+/story/assets/*.ttf /story/assets/:splat.ttf 200
 
-# API请求不重定向（如果有的话）
-/api/*  /api/:splat  200
+# 根目录静态资源
+/story/*.css /story/:splat.css 200
+/story/*.js /story/:splat.js 200
+/story/*.png /story/:splat.png 200
+/story/*.jpg /story/:splat.jpg 200
+/story/*.ico /story/:splat.ico 200
 
-# SPA路由重定向（仅对HTML页面）
-/*    /index.html   200
+# SPA路由重定向（最后匹配）
+/story/* /story/index.html 200
