@@ -1,1 +1,23 @@
+# 静态资源文件 - 直接返回，不重定向
+*.css   /:splat   200
+*.js    /:splat   200
+*.png   /:splat   200
+*.jpg   /:splat   200
+*.jpeg  /:splat   200
+*.gif   /:splat   200
+*.svg   /:splat   200
+*.ico   /:splat   200
+*.woff  /:splat   200
+*.woff2 /:splat   200
+*.ttf   /:splat   200
+*.eot   /:splat   200
+
+# assets目录下的所有文件
+/assets/*  /assets/:splat  200
+/story/assets/*  /story/assets/:splat  200
+
+# API请求不重定向（如果有的话）
+/api/*  /api/:splat  200
+
+# SPA路由重定向（仅对HTML页面）
 /*    /index.html   200
