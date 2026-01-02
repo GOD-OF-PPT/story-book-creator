@@ -1,0 +1,86 @@
+{
+  "app": {
+    "title": "📚 AI Storybook Generator",
+    "slogan": "Create Your Story with AI"
+  },
+  "nav": {
+    "home": "Home",
+    "myBooks": "My Books",
+    "publicBooks": "Public Books",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout"
+  },
+  "book": {
+    "create": "Generate Book",
+    "newBook": "New Book",
+    "storyPlaceholder": "Enter your story text (at least 100 characters)...",
+    "characters": "characters",
+    "title": "Title",
+    "language": "Language",
+    "audio": "Audio",
+    "withAudio": "With Audio",
+    "withoutAudio": "Without Audio",
+    "chinese": "Chinese",
+    "english": "English",
+    "isPublic": "Public",
+    "private": "Private",
+    "generating": "Generating...",
+    "generatingAlert": "The book is being generated, please try again later",
+    "completed": "Completed",
+    "failed": "Generation Failed",
+    "delete": "Delete",
+    "export": "Export",
+    "scenes": "Scenes",
+    "images": "Images",
+    "audios": "Audios",
+    "generateAudio": "Generate Audio",
+    "untitled": "Untitled Book",
+    "cover": "Cover",
+    "preview": "Preview",
+    "randomGenerate": "Random Generate"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "login": "Login",
+    "register": "Register",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "loginSuccess": "Login successful",
+    "registerSuccess": "Registration successful",
+    "loginFailed": "Login failed",
+    "registerFailed": "Registration failed",
+    "passwordMismatch": "Passwords do not match"
+  },
+  "error": {
+    "loadFailed": "Load failed",
+    "generateFailed": "Generation failed",
+    "storyTooShort": "Story is too short, please enter at least 100 characters",
+    "storyTooLong": "Story is too long, please keep it within 1500 characters",
+    "bookGenerating": "Book is generating, please try again later",
+    "networkError": "Network error, please try again later",
+    "unauthorized": "Unauthorized, please login first",
+    "selectExportFormat": "Please select at least one export format"
+  },
+  "common": {
+    "all": "All",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "loading": "Loading...",
+    "preview": "Preview",
+    "manage": "Manage",
+    "user": "User",
+    "exporting": "Exporting...",
+    "startExport": "Start Export"
+  },
+  "limit": {
+    "anonymousExceeded": "Anonymous users can only generate {{limit}} time(s) per day. Please login to continue.",
+    "userDailyExceeded": "You have reached your daily generation limit ({{limit}} times). Please try again tomorrow.",
+    "remainingHint": "📊 Remaining {{remaining}}/{{limit}} today",
+    "upgradeHint": "💎 Upgrade for more"
+  }
+}

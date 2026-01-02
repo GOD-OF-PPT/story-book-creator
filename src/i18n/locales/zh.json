@@ -1,0 +1,86 @@
+{
+  "app": {
+    "title": "📚 AI绘本生成器",
+    "slogan": "用AI创作属于你的故事"
+  },
+  "nav": {
+    "home": "首页",
+    "myBooks": "我的绘本",
+    "publicBooks": "公开绘本",
+    "login": "登录",
+    "register": "注册",
+    "logout": "退出"
+  },
+  "book": {
+    "create": "生成绘本",
+    "newBook": "新建绘本",
+    "storyPlaceholder": "输入你的故事文本（至少100个字符）...",
+    "characters": "字符",
+    "title": "标题",
+    "language": "语言",
+    "audio": "音频",
+    "withAudio": "有语音",
+    "withoutAudio": "无语音",
+    "chinese": "中文",
+    "english": "英文",
+    "isPublic": "公开",
+    "private": "私密",
+    "generating": "生成中...",
+    "generatingAlert": "绘本正在生成中，请稍后再试",
+    "completed": "已完成",
+    "failed": "生成失败",
+    "delete": "删除",
+    "export": "导出",
+    "scenes": "场景",
+    "images": "图片",
+    "audios": "音频",
+    "generateAudio": "生成语音朗读",
+    "untitled": "未命名绘本",
+    "cover": "封面",
+    "preview": "预览",
+    "randomGenerate": "随机生成"
+  },
+  "auth": {
+    "email": "邮箱",
+    "password": "密码",
+    "confirmPassword": "确认密码",
+    "login": "登录",
+    "register": "注册",
+    "noAccount": "还没有账号？",
+    "hasAccount": "已有账号？",
+    "loginSuccess": "登录成功",
+    "registerSuccess": "注册成功",
+    "loginFailed": "登录失败",
+    "registerFailed": "注册失败",
+    "passwordMismatch": "密码不一致"
+  },
+  "error": {
+    "loadFailed": "加载失败",
+    "generateFailed": "生成失败",
+    "storyTooShort": "故事内容过短，请输入至少100个字符",
+    "storyTooLong": "故事内容过长，请控制在1500个字符以内",
+    "bookGenerating": "绘本正在生成中，请稍后再试",
+    "networkError": "网络错误，请稍后重试",
+    "unauthorized": "未授权，请先登录",
+    "selectExportFormat": "请至少选择一种导出格式"
+  },
+  "common": {
+    "all": "全部",
+    "submit": "提交",
+    "cancel": "取消",
+    "confirm": "确认",
+    "save": "保存",
+    "loading": "加载中...",
+    "preview": "预览",
+    "manage": "管理",
+    "user": "用户",
+    "exporting": "导出中...",
+    "startExport": "开始导出"
+  },
+  "limit": {
+    "anonymousExceeded": "未登录用户每日只能生成{{limit}}次，请登录后继续使用",
+    "userDailyExceeded": "您今日的生成次数已达上限（{{limit}}次），请明天再试",
+    "remainingHint": "📊 今日剩余 {{remaining}}/{{limit}} 次",
+    "upgradeHint": "💎 开通会员享更多次数"
+  }
+}
