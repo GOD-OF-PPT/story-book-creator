@@ -88,7 +88,7 @@ export default function Preview() {
           language={book.language === 'zh' ? 'zh-CN' : 'en-US'}
         />
         <BookSchema
-          name={book.title}
+          name={book.title || '未命名绘本'}
           description={description}
           image={coverImage}
           datePublished={publishedTime}
@@ -177,7 +177,7 @@ export default function Preview() {
         language={book.language === 'zh' ? 'zh-CN' : 'en-US'}
       />
       <BookSchema
-        name={book.title}
+        name={book.title || '未命名绘本'}
         description={description}
         image={coverImage}
         datePublished={publishedTime}
