@@ -26,7 +26,7 @@ export default function Register() {
 
     try {
       const response = await authApi.register(email, password);
-      const responseData = response.data.data || response.data;
+      const responseData = response.data || response;
       const token = responseData.accessToken || responseData.access_token;
       if (token) {
         localStorage.setItem('token', token);
