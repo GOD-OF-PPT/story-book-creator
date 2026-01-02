@@ -108,7 +108,11 @@ function Home() {
         imageModel,
         generateAudio,
         (progress) => {
-          console.log(`[生成进度] 场景${progress.sceneNumber} ${progress.resourceType} - ${progress.stage}`);
+          if (progress.progress !== undefined) {
+            console.log(`[创建生成进度] ${progress.progress.toFixed(1)}% - 场景${progress.sceneNumber} ${progress.resourceType} - ${progress.stage}`);
+          } else {
+            console.log(`[创建生成进度] 场景${progress.sceneNumber} ${progress.resourceType} - ${progress.stage}`);
+          }
         }
       );
       
@@ -158,7 +162,11 @@ function Home() {
         imageModel,
         generateAudio,
         (progress) => {
-          console.log(`[生成进度] 场景${progress.sceneNumber} ${progress.resourceType} - ${progress.stage}`);
+          if (progress.progress !== undefined) {
+            console.log(`[随机生成进度] ${progress.progress.toFixed(1)}% - 场景${progress.sceneNumber} ${progress.resourceType} - ${progress.stage}`);
+          } else {
+            console.log(`[随机生成进度] 场景${progress.sceneNumber} ${progress.resourceType} - ${progress.stage}`);
+          }
         }
       );
       

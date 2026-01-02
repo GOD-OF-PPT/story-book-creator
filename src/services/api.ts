@@ -110,7 +110,7 @@ export const bookApi = {
   findAll: (language?: string) => api.get<Book[]>('/book', { params: language ? { language } : {} }),
   findOne: (id: string) => api.get<Book>(`/book/${id}`),
   generate: (id: string, voiceId?: string, imageModel?: 'doubao', generateAudio: boolean = true) => 
-    api.post<{ bookId: string; message: string }>(`/book/${id}/generate`, { voiceId, imageModel, generateAudio }),
+    api.post<{ success: boolean; message: string; data: Book }>(`/book/${id}/generate`, { voiceId, imageModel, generateAudio }),
   regenerateScene: (id: string, sceneNumber: number, type: 'image' | 'audio' | 'both', voiceId?: string) =>
     api.post(`/book/${id}/regenerate/${sceneNumber}`, { type, voiceId }),
   updateSceneResource: (bookId: string, sceneNumber: number, type: 'image' | 'audio', r2Url: string) =>
