@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// export const API_BASE_URL = 'https://api.nm-cv.com';
-export const API_BASE_URL = 'http://127.0.0.1:3000';
+export const API_BASE_URL = 'https://api.nm-cv.com';
+// export const API_BASE_URL = 'http://127.0.0.1:3000';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
