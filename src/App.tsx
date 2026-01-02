@@ -42,7 +42,7 @@ function App() {
   }, [i18n]);
 
   return (
-    <BrowserRouter basename="/story">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         

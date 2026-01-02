@@ -4,6 +4,6 @@
     "/*"
   ],
   "exclude": [
-    "/story/assets/*"
+    "/assets/*"
   ]
 }

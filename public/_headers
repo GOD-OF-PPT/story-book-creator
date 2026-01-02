@@ -1,33 +1,33 @@
 # 为静态资源设置正确的MIME类型
-/story/assets/*.css
+/assets/*.css
   Content-Type: text/css
 
-/story/assets/*.js
+/assets/*.js
   Content-Type: application/javascript
 
-/story/assets/*.png
+/assets/*.png
   Content-Type: image/png
 
-/story/assets/*.jpg
+/assets/*.jpg
   Content-Type: image/jpeg
 
-/story/assets/*.jpeg
+/assets/*.jpeg
   Content-Type: image/jpeg
 
-/story/assets/*.gif
+/assets/*.gif
   Content-Type: image/gif
 
-/story/assets/*.svg
+/assets/*.svg
   Content-Type: image/svg+xml
 
-/story/assets/*.ico
+/assets/*.ico
   Content-Type: image/x-icon
 
-/story/assets/*.woff
+/assets/*.woff
   Content-Type: font/woff
 
-/story/assets/*.woff2
+/assets/*.woff2
   Content-Type: font/woff2
 
-/story/assets/*.ttf
+/assets/*.ttf
   Content-Type: font/ttf

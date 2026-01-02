@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/story/',
+  // 移除 base 配置，使用根路径部署
   build: {
     assetsDir: 'assets',
     rollupOptions: {
