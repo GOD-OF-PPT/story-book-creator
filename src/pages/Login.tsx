@@ -19,11 +19,16 @@ export default function Login() {
 
     try {
       const response = await authApi.login(email, password);
-      const responseData = response.data || response;
-      const token = responseData.accessToken || responseData.access_token;
-      if (token) {
+      console.log('登录响应:', response.data);
+      
+      const responseData = response.data as any;
+      // 适配新的返回格式：data.accessToken 和 data.user
+      const token = responseData.data?.accessToken || responseData.accessToken || responseData.access_token;
+      const user = responseData.data?.user || responseData.user;
+      
+      if (token && user) {
         localStorage.setItem('token', token);
-        localStorage.setItem('user', JSON.stringify(responseData.user));
+        localStorage.setItem('user', JSON.stringify(user));
         window.dispatchEvent(new Event('userLogin'));
         navigate('/');
       } else {
