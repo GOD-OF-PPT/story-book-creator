@@ -4,7 +4,7 @@ export const API_BASE_URL = import.meta.env.PROD ? 'https://api.nm-cv.com' : 'ht
 
 const api = axios.create({
   baseURL: API_BASE_URL,
-  timeout: 10000, // 10秒超时
+  timeout: 300000, // 300秒超时
   headers: {
     'Cache-Control': 'no-cache',
     'Pragma': 'no-cache'
