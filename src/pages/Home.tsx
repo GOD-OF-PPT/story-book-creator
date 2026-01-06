@@ -64,7 +64,7 @@ function Home() {
   };
 
   const handleSubmit = async (imageModel?: 'doubao', generateAudio: boolean = true, language: string = 'zh', isPublic: boolean = false) => {
-    if (!storyText.trim()) return;
+    if (!storyText.trim() || loading) return;
     
     if (storyText.length < 1) {
       alert('故事内容过短，请输入至少100个字符的故事内容');
@@ -121,9 +121,10 @@ function Home() {
       await loadLimitInfo();
       
       setStoryText('');
-    } catch (error) {
+    } catch (error: any) {
       console.error('[Home] handleSubmit - 生成失败:', error);
-      alert('生成失败: ' + error);
+      const errorMessage = error.response?.data?.message || error.message || '生成失败，请稍后重试';
+      alert(errorMessage);
     } finally {
       setLoading(false);
     }
